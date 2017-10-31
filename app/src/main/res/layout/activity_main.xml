@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.itp1dam.converdroid.MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp">
+
+        <RadioGroup
+            android:id="@+id/rgBase"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Base del número" />
+
+            <RadioButton
+                android:id="@+id/bBinario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:text="Binario" />
+
+            <RadioButton
+                android:id="@+id/bOctal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Octal" />
+
+            <RadioButton
+                android:id="@+id/bDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Decimal" />
+
+            <RadioButton
+                android:id="@+id/bHexadecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hexadecimal" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Número" />
+
+            <EditText
+                android:digits="0123456789ABCDEF"
+                android:inputType="textCapCharacters"
+                android:id="@+id/etNumero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/bConvertir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Convertir" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Resultado de la conversión" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center_vertical"
+                android:text="Binario:" />
+
+            <TextView
+                android:id="@+id/tBinario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:srcCompat="@drawable/lineahorizontal" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center_vertical"
+                android:text="Octal:" />
+
+            <TextView
+                android:id="@+id/tOctal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:srcCompat="@drawable/lineahorizontal" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center_vertical"
+                android:text="Decimal:" />
+
+            <TextView
+                android:id="@+id/tDecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:text="0" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_columnSpan="2"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                app:srcCompat="@drawable/lineahorizontal" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center_vertical"
+                android:text="Hexadecimal:" />
+
+            <TextView
+                android:id="@+id/tHexadecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnSpan="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_rowSpan="1"
+                android:layout_rowWeight="1"
+                android:gravity="center"
+                android:text="0" />
+        </GridLayout>
+
+    </LinearLayout>
+</LinearLayout>
